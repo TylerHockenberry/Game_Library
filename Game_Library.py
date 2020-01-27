@@ -56,23 +56,32 @@ def quit():
 
 #Main
 if __name__ == "__main__" :
+    
     running = True
     while running:
+        
         start_screen()
         users_choice = input("Please input number from desired option: ")
+        
         if users_choice == "1" :
             add_edit_game()
+            
         elif users_choice == "2" :
             print_all_games()
+            
         elif users_choice == "3" :
             search_by_title()
+            
         elif users_choice == "4" :
             remove_a_game()
+            
         elif users_choice == "5" :
             save_database()
+            
         elif users_choice == "Q":
             quit()
             running = False
+            
         elif users_choice == "q":
             quit()
             running = False                   
