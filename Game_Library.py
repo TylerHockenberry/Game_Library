@@ -11,17 +11,18 @@ games '''
 
 #Start screen displaying options for user's selection.
 def start_screen():
-    print("Hello! Welcome to your game library!")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    print()
-    print("1) Add/Edit game")
-    print("2) Print all games")
-    print("3) Search by title")
-    print("4) Remove a game")
-    print("5) Save Database")
-    print()
-    print("Q) Quit")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("""
+    Hello! Welcome to your game library!
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    1) Add/Edit a game
+    2) Print all games
+    3) Search by title
+    4) Remove a game
+    5) Save Database
+    
+    Q) Quit
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    """)
 
 #Adds or edits any game and it's info that's chosen by the user.
 def add_edit_game():
