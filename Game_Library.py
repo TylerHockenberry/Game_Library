@@ -8,6 +8,8 @@ games '''
 #imports
 
 #globals
+
+#Start screen displaying options for user's selection.
 def start_screen():
     print("Hello! Welcome to your game library!")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
@@ -21,26 +23,32 @@ def start_screen():
     print("Q) Quit")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
+#Adds or edits any game and it's info that's chosen by the user.
 def add_edit_game():
     print()
     print("Option Add/Edit game selected!")
 
+#Displays all games found within the library.
 def print_all_games():
     print()
     print("Option Print all games selected!")
-    
+
+#Finds game and information based off of title given by user.
 def search_by_title():
     print()
     print("Option Search by title selected!")
 
+#Removes a selected game within database.
 def remove_a_game():
     print()
     print("Option Remove a game selected!")
 
+#Saves the Game Library.
 def save_database():
     print()
     print("Option Save database selected!")
-    
+
+#Saves everything and exits out of the program.    
 def quit():
     print()
     print("Have a great day! See ya!")
