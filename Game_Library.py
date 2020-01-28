@@ -6,6 +6,9 @@
 games '''
 
 #imports
+#Added Jan 28, 2020 v
+import pickle
+#Added Jan 28, 2020 ^
 
 #globals
 
@@ -26,35 +29,59 @@ def start_screen():
 
 #Adds or edits any game and it's info that's chosen by the user.
 def add_edit_game():
-    print()
-    print("Option Add/Edit game selected!")
+    print("""
+    Option Add/Edit game selected! """)
 
 #Displays all games found within the library.
 def print_all_games():
-    print()
-    print("Option Print all games selected!")
+    #Borrowed from MR. Schmidt's big_brother.py v
+    key_list = games.keys()
 
+    for key in key_list:
+        print()
+        print("Genre: ", games[key][0])
+        print("Title: ", games[key][1])
+        print("Developer: ", games[key][2])
+        print("Publisher: ", games[key][3])
+        print("Platform: ", games[key][4])
+        print("Year Published: ", games[key][5])
+        print("Rating: ", games[key][6])
+        print("Single or Multiplayer: ", games[key][7])
+        print("Price: ", games[key][8])
+        print("Completed: ", games[key][9])
+        print("Date of Purchase: ", games[key][10])
+        print("----------------------")
+     
+        
 #Finds game and information based off of title given by user.
 def search_by_title():
-    print()
-    print("Option Search by title selected!")
+    print("""
+    Option Search by title selected! """)
 
 #Removes a selected game within database.
 def remove_a_game():
-    print()
-    print("Option Remove a game selected!")
+    print("""
+    Option Remove a game selected! """)
 
 #Saves the Game Library.
 def save_database():
-    print()
-    print("Option Save database selected!")
+    pickle_file = open("game_lib.pickle", "wb")
+    pickle.dump(games, pickle_file)
+    pickle_file.close() 
+    print("Save Completed!")
+    
 
 #Saves everything and exits out of the program.    
 def quit():
-    print()
-    print("Have a great day! See ya!")
+    print("""
+    Have a great day! See ya! """)
 
 #Main
+games = {}
+pickle_file = open("game_lib.pickle", "rb")
+games = pickle.load(pickle_file)
+pickle_file.close()
+
 if __name__ == "__main__" :
     
     running = True
